@@ -16,21 +16,21 @@ The plugin also connects your agent to Gitback's MCP server at `https://gitback.
 **Claude Code**
 
 ```bash
-claude plugin marketplace add sahildave/gitback-skills
+claude plugin marketplace add Coduo-Studio/gitback-skills
 claude plugin install gitback@gitback
 ```
 
 **Codex**
 
 ```bash
-codex plugin marketplace add sahildave/gitback-skills
+codex plugin marketplace add Coduo-Studio/gitback-skills
 codex plugin add gitback@gitback
 ```
 
 **Cursor, GitHub Copilot, and other agents** ([Agent Skills](https://agentskills.io))
 
 ```bash
-npx skills add sahildave/gitback-skills
+npx skills add Coduo-Studio/gitback-skills
 ```
 
 The repository is also an [Agent Plugins](https://agent-plugins.org) 1.0.0 package (`plugin.json`, `skills/`, `mcp.json`) for any client that supports the format.
