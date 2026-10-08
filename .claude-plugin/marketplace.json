@@ -1,0 +1,13 @@
+{
+  "name": "gitback",
+  "description": "Gitback skills for maintainers",
+  "owner": { "name": "Sahil Dave", "url": "https://gitback.us" },
+  "plugins": [
+    {
+      "name": "gitback",
+      "source": "./",
+      "description": "Fill your Gitback Board from your own repository: FAQ, changelog and roadmap, each as a pull request you review.",
+      "version": "0.1.0"
+    }
+  ]
+}

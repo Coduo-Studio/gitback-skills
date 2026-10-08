@@ -1,0 +1,3 @@
+interface:
+  display_name: "Gitback Roadmap"
+  short_description: "Sort open issues into your Gitback roadmap lanes, with your approval"

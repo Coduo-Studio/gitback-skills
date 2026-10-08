@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "gitback",
+  "version": "0.1.0",
+  "description": "Fill your Gitback Board from your own repository: FAQ, changelog and roadmap, each as a pull request you review.",
+  "author": {
+    "name": "Sahil Dave",
+    "url": "https://gitback.us"
+  },
+  "homepage": "https://gitback.us",
+  "repository": "https://github.com/sahildave/gitback-skills",
+  "keywords": [
+    "gitback",
+    "faq",
+    "changelog",
+    "roadmap",
+    "github"
+  ],
+  "license": "MIT"
+}

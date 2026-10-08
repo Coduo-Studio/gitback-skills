@@ -1,0 +1,5 @@
+interface:
+  display_name: "Ask Gitback"
+  short_description: "Find the right Gitback skill or MCP tool"
+policy:
+  allow_implicit_invocation: false

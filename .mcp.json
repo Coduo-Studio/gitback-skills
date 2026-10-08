@@ -1,0 +1,5 @@
+{
+  "mcpServers": {
+    "gitback": { "type": "http", "url": "https://gitback.us/api/mcp" }
+  }
+}

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Gitback Changelog"
+  short_description: "Start publishing GitHub Releases for your Gitback changelog"

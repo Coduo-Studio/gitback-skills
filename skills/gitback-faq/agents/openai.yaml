@@ -1,0 +1,3 @@
+interface:
+  display_name: "Gitback FAQ"
+  short_description: "Draft your Gitback FAQ from the repo and open a PR"
