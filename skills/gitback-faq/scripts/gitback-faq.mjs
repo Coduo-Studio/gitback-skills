@@ -20,7 +20,7 @@ import { join, relative, sep } from "node:path";
 
 const FAQ_DIR = ".gitback/faq";
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const KNOWN_KEYS = new Set(["question", "order", "tags", "updated", "source"]);
+const KNOWN_KEYS = new Set(["question", "order", "tags", "updated", "draft", "source"]);
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
 
 class FrontmatterError extends Error {}
@@ -82,6 +82,12 @@ function parseFaqFrontmatter(text) {
   if (tags !== undefined) out.tags = inlineList(tags, "tags");
   const updated = seen.get("updated");
   if (updated !== undefined) out.updated = scalar(updated);
+  const draft = seen.get("draft");
+  if (draft !== undefined) {
+    const s = scalar(draft);
+    if (s !== "true" && s !== "false") throw new FrontmatterError(`draft must be true or false, got: ${s}`);
+    out.draft = s === "true";
+  }
   const source = seen.get("source");
   if (source !== undefined) out.source = scalar(source);
   out.body = lines.slice(close + 1).join("\n").trim();
@@ -229,7 +235,7 @@ function renderReadmeIndex(entries) {
   }
   if (faq.length > 0 || skipped.length > 0) {
     lines.push("", "### FAQ", "");
-    for (const row of faq) lines.push(`- [${row.frontmatter.question}](${row.path})`);
+    for (const row of faq) lines.push(`- [${row.frontmatter.question}](${row.path})${row.frontmatter.draft ? " — draft" : ""}`);
     for (const row of skipped) lines.push(`- \`${row.path}\` — not indexed: ${indexSafeReason(row.reason)}`);
   }
   if (help.length > 0 || hasCollections) {

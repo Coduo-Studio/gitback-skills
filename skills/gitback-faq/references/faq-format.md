@@ -30,6 +30,7 @@ Flat `key: value` lines between two `---` fences, nothing nested. Exactly these 
 | `order` | no | An integer. Lower comes first; entries without one go last |
 | `tags` | no | An inline list: `[configuration]` or `[configuration, deployment]`. The Board shows one group per tag |
 | `updated` | no | `YYYY-MM-DD`, the day you wrote the answer |
+| `draft` | no | `true` or `false`, nothing else. A draft is listed in `.gitback/README.md` with the suffix ` — draft`. Any other value makes Gitback skip the file in the index |
 | `source` | no | The https URL of the GitHub Discussion the question came from. Set it only when there is one. It records where the question was asked; the Board does not show it yet. Cite Issues in the answer body instead |
 
 Write values bare. Quote a value only when it contains a `:` followed by a space or starts with `[`, `{`, `"` or `'`.
